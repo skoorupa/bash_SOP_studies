@@ -1,0 +1,1 @@
+ilosc slow w pliku: 7 wierszyk.txt

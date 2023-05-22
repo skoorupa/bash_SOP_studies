@@ -1,0 +1,8 @@
+#!/bin/bash
+$PLIK = $1
+
+function policz_slowa () {
+	echo -n "ilosc slow w pliku: "
+	wc $PLIK -w
+}
+https://github.com/skoorupa/bash_SOP_studies.git

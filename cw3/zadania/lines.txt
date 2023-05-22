@@ -1,0 +1,1 @@
+ilosc linii w pliku: 2 wierszyk.txt
