@@ -1,0 +1,4 @@
+1c1
+< to jest plik a.txt
+---
+> to jest plik b.txt
