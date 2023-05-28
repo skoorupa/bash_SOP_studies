@@ -12,25 +12,29 @@ then
 	exit 1
 fi
 
-echo -n "" > $2
+echo -n > $2
 
 maxwords=0
 lines=$(cat $1 | wc -l)
-while IFS= read -r line
+while read -r line
 do
 	words=$(echo $line | wc -w)
-	if [ $maxwords -lt $words ]
+	if [ $maxwords -eq 0 ]
 	then
 		maxwords=$words
+	elif [ $maxwords -ne $words ]
+	then
+		echo "Niepoprawna macierz!"
+		exit 1
 	fi
 done < $1
 
-for (( i=1; $i<=$maxwords; i++ ))
+for (( column=1; $column<=$maxwords; column++ ))
 do
-	kolumna=$(cut -d" " -f$i $1)
+	kolumna=$(cut -d" " -f$column $1)
 	while read -r line
 	do
 		echo -n "$line " >> $2
 	done <<< $kolumna
-	echo >> $2
+	echo "" >> $2
 done

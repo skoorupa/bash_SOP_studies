@@ -1,0 +1,3 @@
+apple orange apple 
+orange mango mango 
+banana truskawka apple 
